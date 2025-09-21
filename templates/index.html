@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth Guardian - AI Misinformation Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Dynamic Misinformation Matrix Background -->
+    <div class="misinformation-matrix">
+        <!-- Base layers -->
+        <div class="matrix-layer layer-1"></div>
+        <div class="matrix-layer layer-2"></div>
+        
+        <!-- Floating fake news streams -->
+        <div class="fake-news-stream stream-1">
+            🚨 BREAKING: Scientists discover shocking truth big pharma doesn't want you to know! • 
+            Miracle cure found in ancient texts! • 
+            Government covers up alien contact! • 
+            Doctors hate this simple trick! • 
+        </div>
+        <div class="fake-news-stream stream-2">
+            ⚠️ EXCLUSIVE: 90% of people don't know this secret! • 
+            Celebrity reveals weight loss conspiracy! • 
+            Hidden agenda exposed by whistleblower! • 
+            Shocking statistics mainstream media won't report! • 
+        </div>
+        <div class="fake-news-stream stream-3">
+            🔥 VIRAL: Ancient remedy cures everything overnight! • 
+            Forbidden knowledge leaked online! • 
+            They don't want you to know this truth! • 
+            Revolutionary breakthrough suppressed! • 
+        </div>
+        <div class="fake-news-stream stream-4">
+            💀 DANGER: Common household item kills millions! • 
+            Secret society controls world economy! • 
+            Natural law proves everything wrong! • 
+            Instant transformation guaranteed! • 
+        </div>
+        <div class="fake-news-stream stream-5">
+            🎯 EXPOSED: Media lies about basic facts! • 
+            Conspiracy theorists were right all along! • 
+            Hidden truth finally revealed! • 
+            Amazing results doctors can't explain! • 
+        </div>
+        
+        <!-- Conspiracy theory bubbles -->
+        <div class="conspiracy-bubble">FAKE<br/>CURE</div>
+        <div class="conspiracy-bubble">FALSE<br/>STATS</div>
+        <div class="conspiracy-bubble">SCAM<br/>ALERT</div>
+        <div class="conspiracy-bubble">LIES<br/>EXPOSED</div>
+        <div class="conspiracy-bubble">MYTH<br/>BUSTED</div>
+        <div class="conspiracy-bubble">HOAX<br/>DETECTED</div>
+        
+        <!-- Truth shield in center -->
+        <div class="truth-shield">🛡️</div>
+        
+        <!-- Digital rain effect -->
+        <div class="digital-rain" id="digitalRain"></div>
+        
+        <!-- Network connection lines -->
+        <div class="network-lines">
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+            <div class="network-line"></div>
+        </div>
+    </div>
+
+    <!-- Animated particles (keeping original) -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <h1 class="hero-title">🛡️ TRUTH GUARDIAN</h1>
+        <p class="hero-subtitle">AI-Powered Misinformation Detection System</p>
+        <p class="danger-warning">⚠️ See how dangerous fake information can be</p>
+    </header>
+
+    <!-- Fake Personas Collage -->
+    <section class="personas-collage">
+        <div class="persona-card fake">
+            <div class="danger-level danger-high">HIGH RISK</div>
+            <div class="persona-avatar">🤖</div>
+            <h3 class="persona-name">Dr. "FakeMed" Johnson</h3>
+            <p class="persona-claim">"This miracle herb cures cancer in 3 days! Doctors hate this simple trick!"</p>
+        </div>
+
+        <div class="persona-card fake">
+            <div class="danger-level danger-high">HIGH RISK</div>
+            <div class="persona-avatar">👨‍💼</div>
+            <h3 class="persona-name">Prof. "DeepFake" Williams</h3>
+            <p class="persona-claim">"Scientists confirm Earth is flat! NASA has been lying all along!"</p>
+        </div>
+
+        <div class="persona-card fake">
+            <div class="danger-level danger-medium">MEDIUM RISK</div>
+            <div class="persona-avatar">👩‍🔬</div>
+            <h3 class="persona-name">Dr. "Conspiracy" Smith</h3>
+            <p class="persona-claim">"5G towers control your mind! I have secret government documents!"</p>
+        </div>
+
+        <div class="persona-card real">
+            <div class="danger-level danger-low">VERIFIED</div>
+            <div class="persona-avatar">👨‍⚕️</div>
+            <h3 class="persona-name">Dr. Real Medicine</h3>
+            <p class="persona-claim">"Evidence-based treatments show promising results in clinical trials."</p>
+        </div>
+
+        <div class="persona-card fake">
+            <div class="danger-level danger-high">HIGH RISK</div>
+            <div class="persona-avatar">🎭</div>
+            <h3 class="persona-name">"Celebrity" Bot</h3>
+            <p class="persona-claim">"I lost 50 pounds in 2 weeks with this one weird trick!"</p>
+        </div>
+
+        <div class="persona-card real">
+            <div class="danger-level danger-low">VERIFIED</div>
+            <div class="persona-avatar">📰</div>
+            <h3 class="persona-name">Verified News Source</h3>
+            <p class="persona-claim">"Multiple independent sources confirm this scientific discovery."</p>
+        </div>
+    </section>
+
+    <!-- Main Analyzer -->
+    <main class="analyzer-section">
+        <h2 class="analyzer-title">🔍 Analyze Text for Misinformation</h2>
+        
+        <div class="input-container">
+            <textarea 
+                id="textInput" 
+                class="text-input"
+                placeholder="Paste any suspicious text, news article, or claim here to analyze it for potential misinformation..."
+            ></textarea>
+        </div>
+        
+        <button id="analyzeBtn" class="analyze-btn">
+            🚀 Analyze Text
+        </button>
+        
+        <div id="result" class="result-container" style="display: none;"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🌟 Built with AI to protect truth and combat misinformation</p>
+        <p>Remember: Always verify information from multiple reliable sources!</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
